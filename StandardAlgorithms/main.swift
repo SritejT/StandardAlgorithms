@@ -22,3 +22,16 @@ printIntegers(range: 5)
 let question = "How are you today"
 let message = "\(question)?"
 print(message)
+
+class MarioKartVehicle {
+    let name: String
+    var colour: String
+    var speed: Int
+    
+    init(name: String, colour: String) {
+        self.name = name
+        self.colour = colour
+        self.speed = 0
+    }
+    
+}
