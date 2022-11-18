@@ -46,4 +46,20 @@ class SortingTest: XCTestCase {
         XCTAssertEqual(sortedArray, expected)
     }
     
+    func testInsertionSortOnUnsortedArrayOfIntegersReturnsSortedArray() {
+        let arrayToSort = [1, 3, 2, 5, 6, 4, 2, 9, 10, 23, 3, 34, 46, 79]
+        let expected = [1, 2, 2, 3, 3, 4, 5, 6, 9, 10, 23, 34, 46, 79]
+        let sorting = Sorting()
+        let sortedArray = sorting.insertionSort(unsortedArray: arrayToSort)
+        XCTAssertEqual(sortedArray, expected)
+    }
+    
+    func testQuickSortOnUnsortedArrayOfIntegersReturnsSortedArray() {
+        let arrayToSort = [1, 3, 2, 5, 6, 4, 2, 9, 10, 23, 3, 34, 46, 79]
+        let expected = [1, 2, 2, 3, 3, 4, 5, 6, 9, 10, 23, 34, 46, 79]
+        let sorting = Sorting()
+        let sortedArray = sorting.quickSort(unsortedArray: arrayToSort)
+        XCTAssertEqual(sortedArray, expected)
+    }
+    
 }
