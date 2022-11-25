@@ -20,24 +20,7 @@ class SortingTest: XCTestCase {
         XCTAssertEqual(sortedArray, expected)
     }
     
-    func testLinearSearchWithTargetIntegerReturnsBoolean() {
-        let target = 19
-        let expected = true
-        let sorting = Sorting()
-        let arrayOfInts = [1, 2, 5, 13, 24, 19, 67, 54, 43, 2, 1]
-        let isTargetInArray = sorting.linearSearch(elementToFind: target, arrayToSearch: arrayOfInts)
-        XCTAssertEqual(isTargetInArray, expected)
-    }
-    
-    func testBinarySearchOnSortedArrayOfIntegersReturnsBoolean() {
-        let target = 56
-        let expected = true
-        let sorting = Sorting()
-        let sortedArrayOfInts = [1, 2, 5, 7, 8, 9, 11, 34, 55, 56, 67, 78, 123, 345]
-        let isTargetInArray = sorting.binarySearch(elementToFind: target, sortedArrayToSearch: sortedArrayOfInts)
-        XCTAssertEqual(isTargetInArray, expected)
-    }
-    
+
     func testMergeSortOnUnsortedArrayOfIntegersReturnsSortedArray() {
         let arrayToSort = [1, 3, 2, 5, 6, 4, 2, 9, 10, 23, 3, 34, 46, 79]
         let expected = [1, 2, 2, 3, 3, 4, 5, 6, 9, 10, 23, 34, 46, 79]

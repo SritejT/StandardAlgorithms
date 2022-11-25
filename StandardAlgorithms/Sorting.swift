@@ -19,7 +19,7 @@ class Sorting {
                 if newArray[i] > newArray[i+1] {
                     temp = newArray[i+1]
                     newArray[i+1] = newArray[i]
-                    newArray[i] = temp
+                    newArray[i] = temp 
                     swaps += 1
                 }
             }
@@ -27,32 +27,7 @@ class Sorting {
         return newArray
     }
     
-    func linearSearch(elementToFind: Int, arrayToSearch: [Int]) -> Bool {
-        
-        for i in 0..<arrayToSearch.count {
-            if arrayToSearch[i] == elementToFind {
-                return true
-            }
-        }
-        
-        return false
-    }
-    
-    func binarySearch(elementToFind: Int, sortedArrayToSearch: [Int]) -> Bool {
-        var firstIndex = 0
-        var lastIndex = sortedArrayToSearch.count-1
-        while firstIndex <= lastIndex {
-            let middleIndex = (firstIndex + lastIndex)  / 2
-            if sortedArrayToSearch[middleIndex] < elementToFind {
-                firstIndex = middleIndex + 1
-            } else if sortedArrayToSearch[middleIndex] > elementToFind {
-                lastIndex = middleIndex - 1
-            } else {
-                return true
-            }
-        }
-        return false
-    }
+
     
     func mergeSort(unsortedArray: [Int]) -> [Int] {
       if unsortedArray.count <= 1 {
