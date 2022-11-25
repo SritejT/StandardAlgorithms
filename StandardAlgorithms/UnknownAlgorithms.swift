@@ -21,7 +21,7 @@ class UnknownAlgorithms {
             if frequencies.keys.contains(num) {
                 frequencies[num]! += 1
             } else {
-                frequencies[num] = 0
+                frequencies[num] = 1
             }
         }
         
